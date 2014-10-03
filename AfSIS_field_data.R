@@ -9,6 +9,7 @@ setwd(dat_dir)
 
 # install.packages(c("downloader","arm", "wordcloud")), dependencies=TRUE)
 require(downloader)
+require(proj4)
 require(arm)
 require(wordcloud)
 
