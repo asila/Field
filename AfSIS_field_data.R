@@ -77,6 +77,8 @@ fd$VSSEs <- vsse.se$Site[,1]
 fd$WCSp <- wcs.coef$Site[,1]
 fd$WCSs <- wcs.se$Site[,1]
 
+write.csv(fd, "Field_data_summary.csv")
+
 # Site comparison ---------------------------------------------------------
 
 # Setup
@@ -96,8 +98,8 @@ set.seed(090813)
 wordcloud(fdmod$Site, freq=fdmod$PVA, scale=c(1.5,0.01), random.order=F)
 wordcloud(fdmod$Site, freq=fdmod$WET, scale=c(4,0.1), random.order=F)
 wordcloud(fdmod$Site, freq=fdmod$CMA, scale=c(2.5,0.1), random.order=F)
-wordcloud(fdmod$Site, freq=fdmod$DR30, scale=c(2.5,0.1), random.order=F)
-wordcloud(fdmod$Site, freq=fdmod$VSSE, scale=c(2.5,0.1), random.order=F)
+wordcloud(fdmod$Site, freq=fdmod$DR30, scale=c(1.5,0.05), random.order=F)
+wordcloud(fdmod$Site, freq=fdmod$VSSE, scale=c(1.5,0.05), random.order=F)
 wordcloud(fdmod$Site, freq=fdmod$WCS, scale=c(2.5,0.1), random.order=F)
 
 
