@@ -20,4 +20,4 @@ coordinates(ldsfloc) <- ~x+y
 proj4string(ldsfloc) <- CRS("+proj=utm +ellps=WGS84 +zone=36 +north +units=m +no_defs")
 ldsfloc <- as.data.frame(spTransform(ldsfloc, CRS("+proj=longlat +ellps=WGS84")))
 colnames(ldsfloc) <- c("Site", "LID", "Lon", "Lat")
-write.csv(ldsfloc, "./SRM_Data/SRM_LDSF_pts.csv", row.names=F)
+write.csv(ldsfloc[, 4:3], "./SRM_Data/SRM_LDSF_GS.csv", row.names=F)
